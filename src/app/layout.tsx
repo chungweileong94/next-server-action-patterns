@@ -5,8 +5,10 @@ import {Inter as FontSans} from 'next/font/google';
 
 import {cn} from '~/lib/utils';
 import {NavigationHeader} from '~/components/navigation-header';
+import {getToastCookie} from '~/server/lib/toast';
+import {Toaster} from '~/components/ui/sonner';
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
 });
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
+  const toastCookie = getToastCookie();
   return (
     <html lang="en">
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
@@ -23,6 +26,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <NavigationHeader />
         </header>
         {children}
+        <Toaster richColors position="top-center" toastCookie={toastCookie} />
       </body>
     </html>
   );

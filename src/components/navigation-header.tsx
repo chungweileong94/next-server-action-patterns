@@ -13,8 +13,6 @@ import {
 } from '~/components/ui/navigation-menu';
 import {cn} from '~/lib/utils';
 
-import {Icons} from './icons';
-
 const links: {title: string; href: string; description: string}[] = [
   {
     title: 'Basic',
@@ -25,6 +23,11 @@ const links: {title: string; href: string; description: string}[] = [
     title: 'Basic (Progressive Enhancement)',
     href: '/patterns/progressive-enhancement',
     description: 'Basic server action with progressive enhancement',
+  },
+  {
+    title: 'Redirect with toast',
+    href: '/patterns/redirect-with-toast',
+    description: 'Server action that perform redirect with toast',
   },
 ];
 
