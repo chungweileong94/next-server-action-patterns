@@ -4,7 +4,7 @@ import {useFormState, useFormStatus} from 'react-dom';
 
 import {Button} from '~/components/ui/button';
 
-import {basicAction} from './actions';
+import {myAction} from './actions';
 
 function SubmitButton() {
   const {pending} = useFormStatus();
@@ -12,7 +12,7 @@ function SubmitButton() {
 }
 
 export default function BasicPage() {
-  const [message, dispatch] = useFormState(basicAction, '');
+  const [message, dispatch] = useFormState(myAction, '');
 
   return (
     <main className="container flex min-h-96 flex-col items-center justify-center gap-4">

@@ -4,7 +4,7 @@ import {useState, useTransition} from 'react';
 
 import {Button} from '~/components/ui/button';
 
-import {basicAction} from './actions';
+import {myAction} from './actions';
 
 export default function BasicPage() {
   const [message, setMessage] = useState('');
@@ -12,7 +12,7 @@ export default function BasicPage() {
 
   const onClick = () => {
     startTransition(async () => {
-      setMessage(await basicAction());
+      setMessage(await myAction());
     });
   };
 

@@ -2,7 +2,9 @@
 
 import {serverAct} from 'server-act';
 
-export const basicAction = serverAct.action(async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+import {delay} from '~/server/lib/utils';
+
+export const myAction = serverAct.action(async () => {
+  await delay(1000);
   return `Hello from server, ${new Date().toLocaleString()}`;
 });

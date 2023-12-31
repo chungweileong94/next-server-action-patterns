@@ -20,9 +20,14 @@ const links: {title: string; href: string; description: string}[] = [
     description: 'Basic server action usage',
   },
   {
-    title: 'Basic (Progressive Enhancement)',
+    title: 'Progressive Enhancement',
     href: '/patterns/progressive-enhancement',
-    description: 'Basic server action with progressive enhancement',
+    description: 'Server action with progressive enhancement',
+  },
+  {
+    title: 'Form',
+    href: '/patterns/form',
+    description: 'Server action with form',
   },
   {
     title: 'Redirect with toast',
